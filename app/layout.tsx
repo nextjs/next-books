@@ -124,7 +124,7 @@ function BookSidebarContent({ idPrefix, mobile = false }: { idPrefix: string; mo
           <a
             aria-label="View source on GitHub"
             className="text-muted rounded-full p-1.5 transition-colors hover:text-black dark:hover:text-white"
-            href="https://github.com/vercel-labs/next-books"
+            href="https://github.com/nextjs/next-books"
             rel="noopener noreferrer"
             target="_blank"
           >
