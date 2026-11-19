@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   experimental: {
     agentFeedback: true,
+    exposeTestingApiInProductionBuild: process.env.EXPOSE_TESTING_API === '1',
     inlineCss: true,
     useOffline: true,
   },

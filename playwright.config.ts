@@ -20,10 +20,10 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   webServer: {
-    command: `pnpm exec next dev --hostname 127.0.0.1 --port ${port}`,
-    // Blanking POSTGRES_URL runs the suite on the generated preview catalog.
-    env: { POSTGRES_URL: '' },
-    // One dev server per directory: if you have one, set PLAYWRIGHT_BASE_URL to it.
+    // Link prefetching is enabled only in production. Use the generated preview catalog.
+    command: `pnpm build && pnpm start --hostname 127.0.0.1 --port ${port}`,
+    env: { EXPOSE_TESTING_API: '1', POSTGRES_URL: '' },
+    timeout: 120_000,
     reuseExistingServer: true,
     stdout: 'pipe',
     url: baseURL,

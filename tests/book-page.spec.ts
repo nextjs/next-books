@@ -3,20 +3,30 @@ import { expect, test } from '@playwright/test';
 import type { Locator } from '@playwright/test';
 
 async function pressLink(link: Locator) {
-  await link.dispatchEvent('mousedown', { button: 0 });
+  await link.dispatchEvent('pointerdown', { button: 0, pointerType: 'mouse' });
 }
 
 test('a book navigation reveals its shell immediately', async ({ page }) => {
   await page.goto('/');
   const book = page.getByRole('link', { name: /W\.C\. Fields/ });
+  await book.hover();
+  const bounds = await book.boundingBox();
+  if (!bounds) throw new Error('Expected the book link to have a visible bounding box');
+  const historyLength = await page.evaluate(() => history.length);
+  await page.mouse.move(bounds.x + bounds.width / 2, bounds.y + bounds.height / 2);
 
   await instant(page, async () => {
-    await pressLink(book);
-    await page.waitForURL(url => url.pathname === '/5333265');
-    await expect(page.getByText('Back to books')).toBeVisible();
+    await page.mouse.down();
+    try {
+      await page.waitForURL(url => url.pathname === '/5333265');
+      await expect(page.getByText('Back to books')).toBeVisible();
+    } finally {
+      await page.mouse.up();
+    }
   });
 
   await expect(page.getByRole('heading', { name: 'W.C. Fields: A Life on Film' })).toBeVisible();
+  await expect.poll(() => page.evaluate(() => history.length)).toBe(historyLength + 1);
   await expect(page.getByRole('button', { name: 'Back to books' })).toBeVisible();
 });
 
