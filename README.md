@@ -21,6 +21,7 @@ See [Ensuring instant navigations](https://nextjs.org/docs/app/guides/instant-na
 - **[Cache Components](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheComponents)** cache each query with `'use cache'` and `cacheLife`. See [Migrating to Cache Components](https://nextjs.org/docs/app/guides/migrating-to-cache-components).
 - **[Partial Prefetching](https://nextjs.org/docs/app/guides/adopting-partial-prefetching)** prefetches the shared App Shell of links entering the viewport.
 - **[Per-link prefetching](https://nextjs.org/docs/app/guides/optimizing-prefetching#resolve-url-data-at-prefetch-time)** prioritizes the initial browsing path: book links on the first catalog page and pagination links use `prefetch={true}`, while book links on later pages wait for hover or keyboard focus before resolving their URL-dependent content.
+- **[Fast Link](https://github.com/vercel-labs/fast-link)** starts eligible mouse navigation on press for book cards, while preserving hover and focus prefetching. Pagination uses Next.js links so its inline loading indicators still work.
 
 ## Run locally
 

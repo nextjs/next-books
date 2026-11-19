@@ -1,8 +1,8 @@
 'use client';
 
+import { FastLink } from '@fast-link/next';
 import { Button } from '@/components/ui/button';
 import { EmptyState } from '@/components/ui/empty-state';
-import { FastLink } from '@/components/ui/fast-link';
 
 export default function NotFound() {
   return (

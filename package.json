@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@ariakit/react": "^0.4.38",
+    "@fast-link/next": "0.0.2",
     "@neondatabase/serverless": "^1.1.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
@@ -29,7 +30,7 @@
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
     "lucide-react": "^1.34.0",
-    "next": "16.4.0-canary.48",
+    "next": "16.5.0-canary.55",
     "next-themes": "^0.4.6",
     "p-limit": "^7.3.1",
     "react": "19.2.8",
@@ -41,7 +42,7 @@
     "unlazy": "^2.0.1"
   },
   "devDependencies": {
-    "@next/playwright": "16.4.0-canary.48",
+    "@next/playwright": "16.5.0-canary.55",
     "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^26.3.0",
@@ -51,7 +52,7 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "drizzle-kit": "^0.31.10",
     "eslint": "^9.39.5",
-    "eslint-config-next": "16.4.0-canary.8",
+    "eslint-config-next": "16.5.0-canary.55",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-autofix": "^2.2.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",

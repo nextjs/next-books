@@ -1,3 +1,4 @@
+import { FastLink } from '@fast-link/next';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Geist, Geist_Mono } from 'next/font/google';
@@ -9,7 +10,6 @@ import { ThemeProvider } from '@/components/theme/theme-provider';
 import { ThemeToggle } from '@/components/theme/theme-toggle';
 import { Toaster } from '@/components/toaster';
 import ErrorBoundary from '@/components/ui/error-boundary';
-import { FastLink } from '@/components/ui/fast-link';
 import { GitHubIcon } from '@/components/ui/github-icon';
 import { BookFilters, BookFiltersFallback } from '@/features/book/components/book-filters';
 import { BookSearch } from '@/features/book/components/book-search';

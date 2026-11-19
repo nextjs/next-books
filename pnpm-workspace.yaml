@@ -5,14 +5,16 @@ allowBuilds:
   unrs-resolver: false
   utf-8-validate: false
 minimumReleaseAgeExclude:
-  - '@next/env@16.4.0-canary.48'
-  - '@next/playwright@16.4.0-canary.48'
-  - '@next/swc-darwin-arm64@16.4.0-canary.48'
-  - '@next/swc-darwin-x64@16.4.0-canary.48'
-  - '@next/swc-linux-arm64-gnu@16.4.0-canary.48'
-  - '@next/swc-linux-arm64-musl@16.4.0-canary.48'
-  - '@next/swc-linux-x64-gnu@16.4.0-canary.48'
-  - '@next/swc-linux-x64-musl@16.4.0-canary.48'
-  - '@next/swc-win32-arm64-msvc@16.4.0-canary.48'
-  - '@next/swc-win32-x64-msvc@16.4.0-canary.48'
-  - next@16.4.0-canary.48
+  - '@next/eslint-plugin-next@16.5.0-canary.55'
+  - eslint-config-next@16.5.0-canary.55
+  - '@next/env@16.5.0-canary.55'
+  - '@next/playwright@16.5.0-canary.55'
+  - '@next/swc-darwin-arm64@16.5.0-canary.55'
+  - '@next/swc-darwin-x64@16.5.0-canary.55'
+  - '@next/swc-linux-arm64-gnu@16.5.0-canary.55'
+  - '@next/swc-linux-arm64-musl@16.5.0-canary.55'
+  - '@next/swc-linux-x64-gnu@16.5.0-canary.55'
+  - '@next/swc-linux-x64-musl@16.5.0-canary.55'
+  - '@next/swc-win32-arm64-msvc@16.5.0-canary.55'
+  - '@next/swc-win32-x64-msvc@16.5.0-canary.55'
+  - next@16.5.0-canary.55

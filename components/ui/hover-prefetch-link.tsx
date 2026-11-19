@@ -1,7 +1,7 @@
 'use client';
 
+import { FastLink } from '@fast-link/next';
 import { useState } from 'react';
-import { FastLink } from '@/components/ui/fast-link';
 import type { ComponentProps } from 'react';
 
 type Props = Omit<ComponentProps<typeof FastLink>, 'prefetch'> & {
